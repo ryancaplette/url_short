@@ -20,7 +20,7 @@ python -m venv venv
 
 source venv/bin/activate
 
-vim .env (Add Secret Key)
+vim .env (Add SECRET_KEY)
 
 set -a; source .env; set +a
 ```
