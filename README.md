@@ -13,12 +13,16 @@ A URL Shortener built with Django
 * Admin panel for url management
 
 
-## Create virtual environment 
+## Environment Setup
 
 ```
 python -m venv venv
 
 source venv/bin/activate
+
+vim .env (Add Secret Key)
+
+set -a; source .env; set +a
 ```
 
 ## Install & Deploy Django
