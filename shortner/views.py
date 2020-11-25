@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import UrlMappings
+from .models import UrlMapping
 from .forms import UrlForm
 from .utils.path_generator import ShortPath
 from django.http import Http404
@@ -15,7 +15,7 @@ def shortner(request):
             NewUrl.save()
         else:
             form = UrlForm()
-            q = UrlMappings.objects.get(original_url=request.POST.get('original_url'))
+            q = UrlMapping.objects.get(original_url=request.POST.get('original_url'))
             short_path = q.short_path
 
     return render(request, 'shortner/index.html', {'form': form, 'short_path': short_path})
@@ -25,7 +25,7 @@ def goto(request, short_path):
     try:
         print('short_path')
         print(short_path)
-        goto = UrlMappings.objects.get(short_path=short_path)
+        goto = UrlMapping.objects.get(short_path=short_path)
         return redirect(goto.original_url)
     except:
         raise Http404("Short URL Not Found.")
