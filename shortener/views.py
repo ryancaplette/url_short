@@ -4,7 +4,7 @@ from .forms import UrlForm
 from .utils.path_generator import ShortPath
 from django.http import Http404
 
-def shortner(request):
+def shortener(request):
     form = UrlForm(request.POST)
     short_path = ""
     if request.method == 'POST':
@@ -18,7 +18,7 @@ def shortner(request):
             q = UrlMapping.objects.get(original_url=request.POST.get('original_url'))
             short_path = q.short_path
 
-    return render(request, 'shortner/index.html', {'form': form, 'short_path': short_path})
+    return render(request, 'shortener/index.html', {'form': form, 'short_path': short_path})
 
 
 def goto(request, short_path):

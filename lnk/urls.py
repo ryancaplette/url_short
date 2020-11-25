@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from shortner import views
+from shortener import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('<str:short_path>', views.goto, name="redirect"),
-    path('', views.shortner, name = "index"),
+    path('', views.shortener, name = "index"),
 ]

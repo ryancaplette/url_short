@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'shortner/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'shortener/style.css' %}">
     <title>Url Shortener</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
       </div>
       <div class='foot'>
         {% if short_path %}
-        <a target="_blank" href='https://www.google.com' target='_blank'>{{ request.get_host }}/{{ short_path }}</a>
+        <a target="_blank" href='{{request.scheme}}://{{ request.get_host }}/{{ short_path }}' target='_blank'>{{request.scheme}}://{{ request.get_host }}/{{ short_path }}</a>
         {% endif %}
       </div>
     </center>
