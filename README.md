@@ -8,7 +8,7 @@ A URL Shortener built with Django
 
 ## Features
 
-* Shortens URL's to a path of 6 character 
+* Shortens URL's to a path of 6 characters
 
 * Admin panel for url management
 
@@ -20,7 +20,7 @@ python -m venv venv
 
 source venv/bin/activate
 
-vim .env (Add SECRET_KEY)
+vim .env (Export SECRET_KEY as env variable)
 
 set -a; source .env; set +a
 ```
