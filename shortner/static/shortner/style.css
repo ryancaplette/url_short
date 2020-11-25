@@ -1,0 +1,79 @@
+body {
+  padding: 100px;
+  background: #029ce3;
+}
+
+#heading {
+  color: #fff;
+  font-family: 'Inconsolata'
+}
+
+.custom-search form {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-search input {
+  font-family: 'Roboto';
+  font-size: 15px;
+  margin: 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  background: #03a9f4;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all .2s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+.custom-search input:hover {
+  background: #1cb5fd
+}
+
+.custom-search input:focus {
+  background: #fff;
+  color: #666;
+  outline: none;
+}
+
+.foot {
+  padding: 30px;
+}
+
+.foot a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.foot a:hover {
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
+
+.errorlist {
+    display: none;
+}
+
+button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+}

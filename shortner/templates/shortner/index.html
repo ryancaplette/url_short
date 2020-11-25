@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'shortner/style.css' %}">
+    <title>Url Shortener</title>
+</head>
+<body>
+    <center>
+      <h1 id='heading'>URL Short</h1>
+      <div class='custom-search'>
+        <form id='searchform' method="post"> {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="button">Make Link</button>
+        </form>
+      </div>
+      <div class='foot'>
+        {% if short_path %}
+        <a target="_blank" href='https://www.google.com' target='_blank'>{{ request.get_host }}/{{ short_path }}</a>
+        {% endif %}
+      </div>
+
+    </center>
+  </body>
+</html>
